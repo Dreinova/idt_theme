@@ -1,0 +1,69 @@
+﻿@use "./tokens" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: $font-stack;
+  background: $color-bg;
+  color: $color-text;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  @media (max-width: 600px) {
+    //padding: 0 1.25rem;
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+section {
+  max-width: 1200px;
+  margin: 3rem auto;
+  @media (max-width: 600px) {
+    margin: 3rem 1.25rem;
+  }
+  @media (max-width: 900px) {
+    margin: 2rem 1.25rem;
+  }
+} 
+
+.link {
+  font-weight: 600;
+  color: $color-primary;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+body.menu-open {
+  overflow: hidden;
+}

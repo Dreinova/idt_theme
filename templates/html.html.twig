@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ base_path ~ directory }}/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ base_path ~ directory }}/favicon.ico" type="image/x-icon">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+     {{ attach_library('idt_theme/global-styling') }}
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+
+  <body{{attributes.addClass(
+  body_classes ? body_classes : [],
+  node is defined ? 'page-node-' ~ node.bundle|clean_class : '',
+  node is defined ? 'node-id-' ~ node.id : '',
+  is_front ? 'frontpage' : 'not-front',
+  logged_in ? 'user-logged-in' : 'user-anonymous'
+) }}>
+    {% include "@idt_theme/includes/header.html.twig" %}
+    <main id="main-content" class="site-content">
+      {{ page.content }}
+      {{ node.field_historia_zibo.value }}
+    </main>
+    {% include "@idt_theme/includes/footer.html.twig" %}
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+</html>
