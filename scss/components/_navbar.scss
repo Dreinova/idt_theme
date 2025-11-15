@@ -1,5 +1,7 @@
 ﻿@use "../base/tokens" as *;
-
+#block-idt-theme-main-menu {
+  display: none;
+}
 .top-nav {
   position: relative;
   display: flex;
@@ -82,7 +84,7 @@
   }
 
   &::after {
-    background: rgba(#6750A414, 0.10);
+    background: rgba(#6750a414, 0.1);
     clip-path: ellipse(90% 140% at 75% 160%);
   }
 
@@ -215,7 +217,8 @@
   font-size: 0.8rem;
   text-align: center;
   text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease, transform 0.25s ease;
+  transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease,
+    transform 0.25s ease;
   transition-delay: 0s;
 }
 
@@ -334,12 +337,12 @@
 
   .top-nav__mobile-list {
     border: 1px solid rgba(#d8cdfc, 0.8);
-    background: #F3EDF7;
+    background: #f3edf7;
     border-radius: 999px;
     padding: 1rem 0.75rem;
     width: 100%;
     opacity: 0;
-    color: #49454F;
+    color: #49454f;
     transform-origin: top center;
     transform: translateY(-8px) scaleY(0.9);
     transition: transform 0.3s ease, opacity 0.3s ease;
