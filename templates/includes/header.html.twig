@@ -1,4 +1,3 @@
-{{ page.headerTheme }}
 <header class="hero hero--landing">
   <div class="hero__bg" aria-hidden="true">
     <div class="hero__bg-image"></div>
@@ -162,14 +161,7 @@
         <img src="/{{ directory }}/images/conecta_logo.png" alt="Logo" />
       </a>
 
-      <nav class="primary-nav" id="primary-nav" aria-label="Menú principal">
-        <a href="/src/venue.html">Portafolio</a>
-        <a href="/src/about.html">¿Por qué Bogotá?</a>
-        <a href="#agenda">Agenda</a>
-        <a href="/src/eventosExitosoDetalle.html">Eventos exitosos</a>
-        <a href="#aliados">Aliados</a>
-      </nav>
-
+      {{ page.headerTheme }}
       <form class="top-nav__controls" aria-label="Preferencias de navegación">
         <label class="pill pill--light pill--select">
           <span class="pill__label">Stopover</span>
