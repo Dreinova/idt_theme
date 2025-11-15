@@ -5,6 +5,7 @@
       const toggleButton = context.querySelector(".top-nav__toggle");
       const mobileMenu = context.querySelector("#mobile-quick-nav");
       const toggleText = context.querySelector(".top-nav__toggle-text");
+      console.log(topNav, toggleButton, mobileMenu, toggleText);
 
       if (topNav && toggleButton && mobileMenu) {
         const labels = {
