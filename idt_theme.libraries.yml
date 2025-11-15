@@ -1,0 +1,22 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/style.css: {}
+      https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css:
+        { type: external }
+      https://unpkg.com/aos@2.3.1/dist/aos.css: { type: external }
+      https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css:
+        { type: external }
+
+  js:
+    js/main.js: {}
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js:
+      { type: external }
+    https://unpkg.com/aos@2.3.1/dist/aos.js: { type: external }
+
+  dependencies:
+    - core/once
+    - core/drupal
+    - core/jquery
+    - core/drupalSettings
