@@ -1,6 +1,8 @@
 (function ($, Drupal, drupalSettings) {
   Drupal.behaviors.idtTheme = {
     attach: function (context, settings) {
+      console.log("IDT THEME JS");
+
       const topNav = context.querySelector(".top-nav");
       const toggleButton = context.querySelector(".top-nav__toggle");
       const mobileMenu = context.querySelector("#mobile-quick-nav");
