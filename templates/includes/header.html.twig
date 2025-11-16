@@ -14,14 +14,13 @@
         <span class="top-nav__toggle-bars" aria-hidden="true"></span>
         <span class="sr-only top-nav__toggle-text">Abrir menú principal</span>
       </button>
-      {{ menus['main__mobile'] }}   {# versión mobile #}
-
-
       <a class="brand" href="/src/index.html" aria-label="Visit Bogotá Conecta">
         <img src="/{{ directory }}/images/conecta_logo.png" alt="Logo" />
       </a>
 
-      {{ menus.main }}
+      {{ drupal_menu('main') }}          {# Navegación desktop #}
+      {{ drupal_menu('main', { 'template': 'menu--main--mobile' }) }}
+
       <form class="top-nav__controls" aria-label="Preferencias de navegación">
         <label class="pill pill--light pill--select">
           <span class="pill__label">Stopover</span>
