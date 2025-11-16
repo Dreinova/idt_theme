@@ -1,5 +1,5 @@
 services:
-  renobo_theme.twig.config:
+  idt_theme.twig.config:
     class: Drupal\Core\Template\TwigEnvironment
     tags:
       - { name: twig.extension }
