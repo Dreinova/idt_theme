@@ -139,7 +139,7 @@
                   <span class="contact-item__label">Correo:</span>
                   <a
                     class="contact-item__value link"
-                    href="mailto:info@maloka.org"
+                    href="mailto:{{ node.field_correo }}"
                     >{{ node.field_correo }}</a
                   >
                 </div>
@@ -293,6 +293,7 @@
           </button>
         </div>
         <div class="gallery-thumbs" data-gallery-thumbs>
+          {{ debug(node.field_picgallery) }}
           <button
             class="gallery-thumbs__item is-active"
             type="button"
@@ -309,74 +310,6 @@
               />
             </span>
             <span class="gallery-thumbs__label">Domo</span>
-          </button>
-          <button
-            class="gallery-thumbs__item"
-            type="button"
-            data-gallery-thumb
-            data-image="/{{ directory }}/images/festival_cordillera.jpg"
-            data-caption="Aula m&uacute;ltiple con aforo para 150 asistentes."
-            data-alt="Aula m&uacute;ltiple de Maloka"
-          >
-            <span class="gallery-thumbs__media">
-              <img
-                src="/{{ directory }}/images/festival_cordillera.jpg"
-                alt="Aula m&uacute;ltiple de Maloka"
-                loading="lazy"
-              />
-            </span>
-            <span class="gallery-thumbs__label">Aula m&uacute;ltiple</span>
-          </button>
-          <button
-            class="gallery-thumbs__item"
-            type="button"
-            data-gallery-thumb
-            data-image="/{{ directory }}/images/festival_cordillera_2.jpg"
-            data-caption="Sala digital con butacas ergon&oacute;micas y audio 360&deg;."
-            data-alt="Sala digital equipada"
-          >
-            <span class="gallery-thumbs__media">
-              <img
-                src="/{{ directory }}/images/festival_cordillera_2.jpg"
-                alt="Sala digital equipada"
-                loading="lazy"
-              />
-            </span>
-            <span class="gallery-thumbs__label">Sala digital</span>
-          </button>
-          <button
-            class="gallery-thumbs__item"
-            type="button"
-            data-gallery-thumb
-            data-image="/{{ directory }}/images/bog25_placeholder.jpg"
-            data-caption="Laboratorio para experiencias STEM y demostraciones privadas."
-            data-alt="Laboratorio interactivo"
-          >
-            <span class="gallery-thumbs__media">
-              <img
-                src="/{{ directory }}/images/bog25_placeholder.jpg"
-                alt="Laboratorio interactivo"
-                loading="lazy"
-              />
-            </span>
-            <span class="gallery-thumbs__label">Laboratorio</span>
-          </button>
-          <button
-            class="gallery-thumbs__item"
-            type="button"
-            data-gallery-thumb
-            data-image="/{{ directory }}/images/monolith_placeholder.jpg"
-            data-caption="Hall de cines con experiencia inmersiva para grandes grupos."
-            data-alt="Hall de cines"
-          >
-            <span class="gallery-thumbs__media">
-              <img
-                src="/{{ directory }}/images/monolith_placeholder.jpg"
-                alt="Hall de cines"
-                loading="lazy"
-              />
-            </span>
-            <span class="gallery-thumbs__label">Hall de cines</span>
           </button>
         </div>
       </div>
