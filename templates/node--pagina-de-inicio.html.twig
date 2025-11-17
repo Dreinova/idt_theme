@@ -235,8 +235,6 @@
         <div class="events__viewport" data-carousel-viewport>
           <div class="events__track" data-carousel-track>
             {% for item in eventos %}
-            {{ dump(item.fields.field_mainimg.0.url) }}
-
             <a
               class="event-card"
               data-carousel-item
@@ -246,7 +244,7 @@
               <div
                 class="event-card__media"
                 aria-hidden="true"
-                style="background-image: url({{item.fields.field_mainimg.0.value}});"
+                style="background-image: url({{item.fields.field_mainimg.0.url}});"
               ></div>
               <div class="event-card__content">
                 <span class="event-card__tag">No convencional</span>
