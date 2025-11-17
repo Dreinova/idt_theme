@@ -235,7 +235,7 @@
         <div class="events__viewport" data-carousel-viewport>
           <div class="events__track" data-carousel-track>
             {% for item in eventos %}
-            {{ dump(item.fields.field_mainimg) }}
+            {{ dump(item.fields.field_mainimg.0.url) }}
 
             <a
               class="event-card"
