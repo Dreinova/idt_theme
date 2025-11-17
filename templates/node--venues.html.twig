@@ -67,7 +67,7 @@
         <aside class="detail__info-card">
           <div class="detail__info-block">
             <p class="detail__info-label">Direcci&oacute;n</p>
-            <p class="detail__info-data">Carrera 68D #24A - 51</p>
+            <p class="detail__info-data">{{node.field_direccion.0.value}}</p>
           </div>
           <div class="detail__info-block">
             <p class="detail__info-label">Contacto</p>
@@ -91,7 +91,10 @@
                 </span>
                 <div class="contact-item__content">
                   <span class="contact-item__label">Tel&eacute;fono:</span>
-                  <span class="contact-item__value">(601) 4272707</span>
+                  <span
+                    class="contact-item__value"
+                    >{{node.field_telefono.0.value}}</span
+                  >
                 </div>
               </li>
               <li class="contact-item">
@@ -112,7 +115,10 @@
                 </span>
                 <div class="contact-item__content">
                   <span class="contact-item__label">Zona:</span>
-                  <span class="contact-item__value">Occidente</span>
+                  <span
+                    class="contact-item__value"
+                    >{{node.field_turzone.0.value}}</span
+                  >
                 </div>
               </li>
               <li class="contact-item">
@@ -135,8 +141,8 @@
                   <span class="contact-item__label">Correo:</span>
                   <a
                     class="contact-item__value link"
-                    href="mailto:info@maloka.org"
-                    >info@maloka.org</a
+                    href="mailto:{{node.field_correo.0.value}}"
+                    >{{node.field_correo.0.value}}</a
                   >
                 </div>
               </li>
@@ -160,10 +166,10 @@
                   <span class="contact-item__label">P&aacute;gina web:</span>
                   <a
                     class="contact-item__value link"
-                    href="https://maloka.org"
+                    href="{{node.field_weblink.0.value}}"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >https://maloka.org</a
+                    >{{node.field_weblink.0.value}}</a
                   >
                 </div>
               </li>
@@ -173,25 +179,37 @@
             <div class="info__social-icons">
               <h4>Redes sociales</h4>
               <div class="social-icons__links">
-                <a href="#" aria-label="LinkedIn">
+                <a
+                  href="{{node.field_profilelink.0.value}}"
+                  aria-label="LinkedIn"
+                >
                   <img
                     src="/{{ directory }}/images/linkedin.svg"
                     alt="LinkedIn"
                   />
                 </a>
-                <a href="#" aria-label="Instagram">
+                <a
+                  href="{{node.field_profilelink.1.value}}"
+                  aria-label="Instagram"
+                >
                   <img
                     src="/{{ directory }}/images/instagram.svg"
                     alt="Instagram"
                   />
                 </a>
-                <a href="#" aria-label="YouTube">
+                <a
+                  href="{{node.field_profilelink.2.value}}"
+                  aria-label="YouTube"
+                >
                   <img
                     src="/{{ directory }}/images/youtube.svg"
                     alt="YouTube"
                   />
                 </a>
-                <a href="#" aria-label="Facebook">
+                <a
+                  href="{{node.field_profilelink.3.value}}"
+                  aria-label="Facebook"
+                >
                   <img
                     src="/{{ directory }}/images/facebook.svg"
                     alt="Facebook"
