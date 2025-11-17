@@ -117,47 +117,15 @@
             </div>
 
             <div class="places__grid" aria-live="polite">
+            
+            {% for item in venues %}
                 <a class="place-card" href="detalle.html">
                     <div class="place-card__media place-card__media--a" aria-hidden="true"></div>
                     <div class="place-card__body">
-                        <h3 class="place-card__title">Venue Convencional</h3>
+                        <h3 class="place-card__title">{{ item.title }}</h3>
                     </div>
                 </a>
-
-                <a class="place-card" href="detalleProveedores.html">
-                    <div class="place-card__media place-card__media--b" aria-hidden="true"></div>
-                    <div class="place-card__body">
-                        <h3 class="place-card__title">Venue No Convencional</h3>
-                    </div>
-                </a>
-
-                <a class="place-card" href="detalle.html">
-                    <div class="place-card__media place-card__media--c" aria-hidden="true"></div>
-                    <div class="place-card__body">
-                        <h3 class="place-card__title">Parque Industrial Eventos</h3>
-                    </div>
-                </a>
-
-                <a class="place-card" href="detalleProveedores.html">
-                    <div class="place-card__media place-card__media--d" aria-hidden="true"></div>
-                    <div class="place-card__body">
-                        <h3 class="place-card__title">Casa Patrimonial 1867</h3>
-                    </div>
-                </a>
-
-                <a class="place-card" href="detalle.html">
-                    <div class="place-card__media place-card__media--e" aria-hidden="true"></div>
-                    <div class="place-card__body">
-                        <h3 class="place-card__title">Hub Innovación</h3>
-                    </div>
-                </a>
-
-                <a class="place-card" href="detalleProveedores.html">
-                    <div class="place-card__media place-card__media--f" aria-hidden="true"></div>
-                    <div class="place-card__body">
-                        <h3 class="place-card__title">Jardín Secreto</h3>
-                    </div>
-                </a>
+            {% endfor %}
             </div>
         </section>
     </main>
