@@ -142,7 +142,7 @@
             {% for media_item in node.field_picgallery %} {% set image =
             media_item.entity.field_media_image.0 %}
             <img
-              src="{{ file_url(image.entity.uri.value) }}"
+              src="{{ file_url(image.entity.fileuri) }}"
               alt="{{ image.alt }}"
             />
             {% endfor %}
