@@ -141,7 +141,7 @@
           <div class="gallery">
             {% for media_item in node.field_picgallery %} {% set image =
             media_item.entity.field_media_image.0 %}
-            {{ dump(image) }}
+            {{ dump(media_item) }}
             <img
               src="{{ file_url(image.entity.fileuri) }}"
               alt="{{ image.alt }}"
