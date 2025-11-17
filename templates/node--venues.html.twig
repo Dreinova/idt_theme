@@ -19,7 +19,9 @@
     </div>
     <div class="detail__header">
       <div class="detail__content">
-        <h2></h2>
+        <h2>{{ node.getTitle() }}</h2>
+
+        {{ content.body }}
 
         <h4>Disposiciones</h4>
         <div class="dispositons__chips">
@@ -135,6 +137,18 @@
           </button>
         </div>
         <div class="gallery-thumbs" data-gallery-thumbs>
+          {% if node.field_picgallery is not empty %}
+          <div class="gallery">
+            {% for media_item in node.field_picgallery %} {% set image =
+            media_item.entity.field_media_image.0 %}
+            <img
+              src="{{ file_url(image.entity.uri.value) }}"
+              alt="{{ image.alt }}"
+            />
+            {% endfor %}
+          </div>
+          {% endif %}
+
           <button
             class="gallery-thumbs__item is-active"
             type="button"
@@ -564,7 +578,7 @@
           >
             <div class="venue-card__media">
               <img
-                src="/{{ directory }}/images/agora_convenciones.jpg"
+                src="/public/assets/images/agora_convenciones.jpg"
                 alt="Invest Bogotá"
                 loading="lazy"
               />
@@ -580,7 +594,7 @@
           >
             <div class="venue-card__media">
               <img
-                src="/{{ directory }}/images/agora_convenciones.jpg"
+                src="/public/assets/images/agora_convenciones.jpg"
                 alt="COTELCO"
                 loading="lazy"
               />
@@ -596,7 +610,7 @@
           >
             <div class="venue-card__media">
               <img
-                src="/{{ directory }}/images/agora_convenciones.jpg"
+                src="/public/assets/images/agora_convenciones.jpg"
                 alt="Cámara de Comercio"
                 loading="lazy"
               />
@@ -612,7 +626,7 @@
           >
             <div class="venue-card__media">
               <img
-                src="/{{ directory }}/images/agora_convenciones.jpg"
+                src="/public/assets/images/agora_convenciones.jpg"
                 alt="Nombre aliado"
                 loading="lazy"
               />
