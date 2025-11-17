@@ -212,6 +212,10 @@
   flex-direction: column;
   gap: 1.25rem;
 }
+.gallery {
+  display: flex;
+  gap: 10px;
+}
 
 .gallery-viewer {
   position: relative;
