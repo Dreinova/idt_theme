@@ -41,11 +41,9 @@ textarea {
 section {
   max-width: 1200px;
   margin: 0 auto;
-  @media (max-width: 600px) {
-    margin: 3rem 1.25rem;
-  }
-  @media (max-width: 900px) {
-    margin: 2rem 1.25rem;
+  padding: 3rem 0;
+  @media screen and (max-width: 1024px) {
+    padding: 3rem 20px;
   }
 }
 
