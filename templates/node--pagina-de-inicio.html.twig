@@ -234,7 +234,7 @@
         </button>
         <div class="events__viewport" data-carousel-viewport>
           <div class="events__track" data-carousel-track>
-            {% for item in eventos %}
+            {% for item in eventos|reverse|slice(0, 5) %}
             <a
               class="event-card"
               data-carousel-item
