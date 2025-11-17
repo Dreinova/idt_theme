@@ -241,7 +241,11 @@
               data-event="bog25"
               href="eventos.html"
             >
-              <div class="event-card__media" aria-hidden="true"></div>
+              <div
+                class="event-card__media"
+                aria-hidden="true"
+                style="background-image: url({{item.fields.field_mainimg.0.value}});background-color: #b36f40;"
+              ></div>
               <div class="event-card__content">
                 <span class="event-card__tag">No convencional</span>
                 <h3>{{ item.title }}</h3>
