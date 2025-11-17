@@ -21,21 +21,8 @@
       <div class="detail__content">
         <h2>{{ node.getTitle() }}</h2>
 
-        <p>
-          Maloka es el principal museo interactivo de ciencia y tecnología de
-          Colombia, donde niños, jóvenes y adultos exploran la ciencia a través
-          de salas temáticas, laboratorios y experiencias inmersivas. Son
-          aproximadamente 17.000 metros cuadrados de construcción bajo tierra,
-          que alojan todos sus servicios: nueve salas interactivas temáticas;
-          cerca de 300 módulos interactivos; cine-domo de formato gigante, único
-          en Suramérica; cine 3D con el mejor sonido digital; almacén; café;
-          restaurante y parqueadero, entre otros, sumados al gran espacio de la
-          plazoleta pública circundante. <br />
-          Maloka es punto de encuentro, diálogo y descubrimiento. Un lugar donde
-          la ciencia y la cultura se unen para inspirar soluciones, imaginar
-          futuros posibles y construir una sociedad más sostenible, incluyente y
-          participativa.
-        </p>
+        {{ content.body }}
+
         <h4>Disposiciones</h4>
         <div class="dispositons__chips">
           <button class="places-chip places-chip--muted" type="button">
