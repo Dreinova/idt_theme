@@ -274,11 +274,6 @@
                     {% set dia_fin = raw_fin|date('j') %}
 
                     <span>{{ mes_es }} {{ dia_inicio }} - {{ dia_fin }}</span>
-
-                    <span
-                      >{{item.fields.field_fecha_de_inicio.0.value}}
-                      {{item.fields.field_fecha_de_finalizacion.0.value}}</span
-                    >
                   </span>
                   <span class="event-card__meta-item">
                     <svg
@@ -300,7 +295,7 @@
                         d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
                       />
                     </svg>
-                    <span>Diferentes partes de la ciudad</span>
+                    <span>{{item.fields.field_lugar_del_evento.0.value}}</span>
                   </span>
                 </div>
               </div>
