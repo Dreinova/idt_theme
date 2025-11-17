@@ -140,31 +140,26 @@
           {% if node.field_picgallery is not empty %}
           <div class="gallery">
             {% for image in node.field_picgallery %}
-            <img
-              src="{{ file_url(image.entity.uri.value) }}"
-              alt="{{ image.alt }}"
-            />
+            <button
+              class="gallery-thumbs__item is-active"
+              type="button"
+              data-gallery-thumb
+              data-image="{{ file_url(image.entity.uri.value) }}"
+              data-caption="La Sala Digital cuenta con tecnolog&iacute;a de vanguardia y sonido envolvente."
+              data-alt="{{ image.alt }}"
+            >
+              <span class="gallery-thumbs__media">
+                <img
+                  src="{{ file_url(image.entity.uri.value) }}"
+                  alt="{{ image.alt }}"
+                  loading="lazy"
+                />
+              </span>
+              <span class="gallery-thumbs__label">{{ image.alt }}</span>
+            </button>
             {% endfor %}
           </div>
           {% endif %}
-
-          <button
-            class="gallery-thumbs__item is-active"
-            type="button"
-            data-gallery-thumb
-            data-image="/{{ directory }}/images/maloka.jpg"
-            data-caption="La Sala Digital cuenta con tecnolog&iacute;a de vanguardia y sonido envolvente."
-            data-alt="Vista exterior del domo principal"
-          >
-            <span class="gallery-thumbs__media">
-              <img
-                src="/{{ directory }}/images/maloka.jpg"
-                alt="Vista exterior del domo principal"
-                loading="lazy"
-              />
-            </span>
-            <span class="gallery-thumbs__label">Domo</span>
-          </button>
         </div>
       </div>
       <aside class="detail-media__sidebar">
