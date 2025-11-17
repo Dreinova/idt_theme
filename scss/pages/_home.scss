@@ -317,7 +317,8 @@ section {
 .event-card {
   position: relative;
   border-radius: 32px;
-  width: 400px;
+  max-width: 320px;
+  width: 100%;
   min-height: 350px;
   color: #fff;
   overflow: hidden;
