@@ -297,7 +297,7 @@
           <div class="gallery">
             {% for image in node.field_picgallery %}
             <img
-              src="{{ image.entity.uri.value | image_style('large') }}"
+              src="{{ file_url(image.entity.uri.value) }}"
               alt="{{ image.alt }}"
             />
             {% endfor %}
