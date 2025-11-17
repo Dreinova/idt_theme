@@ -293,18 +293,6 @@
           </button>
         </div>
         <div class="gallery-thumbs" data-gallery-thumbs>
-          {% if node.field_picgallery is not empty %}
-          <div class="gallery">
-            {% for media_item in node.field_picgallery %} {% set image =
-            media_item.entity.field_media_image.0 %}
-            <img
-              src="{{ file_url(image.entity.uri.value) }}"
-              alt="{{ image.alt }}"
-            />
-            {% endfor %}
-          </div>
-          {% endif %}
-
           <button
             class="gallery-thumbs__item is-active"
             type="button"
