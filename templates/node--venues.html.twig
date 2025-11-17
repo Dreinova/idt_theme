@@ -117,7 +117,8 @@
                   <span class="contact-item__label">Zona:</span>
                   <span class="contact-item__value">
                     {% for term in node.field_turzone %}
-                    {{ term.entity.name.value }}> {% endfor %}
+                    {{ term.entity.name.value }}
+                    {% endfor %}
                   </span>
                 </div>
               </li>
@@ -171,7 +172,41 @@
           <div class="info-content__icons">
             <div class="info__social-icons">
               <h4>Redes sociales</h4>
-              <div class="social-icons__links"></div>
+              <div class="social-icons__links">
+                <a
+                  href="{{node.field_profilelink.0.uri}}"
+                  aria-label="LinkedIn"
+                >
+                  <img
+                    src="/{{ directory }}/images/linkedin.svg"
+                    alt="LinkedIn"
+                  />
+                </a>
+                <a
+                  href="{{node.field_profilelink.0.uri}}"
+                  aria-label="Instagram"
+                >
+                  <img
+                    src="/{{ directory }}/images/instagram.svg"
+                    alt="Instagram"
+                  />
+                </a>
+                <a href="{{node.field_profilelink.0.uri}}" aria-label="YouTube">
+                  <img
+                    src="/{{ directory }}/images/youtube.svg"
+                    alt="YouTube"
+                  />
+                </a>
+                <a
+                  href="{{node.field_profilelink.0.uri}}"
+                  aria-label="Facebook"
+                >
+                  <img
+                    src="/{{ directory }}/images/facebook.svg"
+                    alt="Facebook"
+                  />
+                </a>
+              </div>
             </div>
           </div>
           <button class="detail__cta" type="button">
