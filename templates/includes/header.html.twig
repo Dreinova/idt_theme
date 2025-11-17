@@ -161,7 +161,8 @@
         <img src="/{{ directory }}/images/conecta_logo.png" alt="Logo" />
       </a>
 
-      {{ page.headerTheme }}
+      {% if page.headerTheme is defined %}{{ page.headerTheme }}{% endif %}
+
       <form class="top-nav__controls" aria-label="Preferencias de navegación">
         <label class="pill pill--light pill--select">
           <span class="pill__label">Stopover</span>

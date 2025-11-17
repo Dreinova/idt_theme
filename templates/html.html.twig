@@ -11,19 +11,13 @@
     <js-placeholder token="{{ placeholder_token }}">
   </head>
 
-  <body{{attributes.addClass(
-  body_classes ? body_classes : [],
-  node is defined ? 'page-node-' ~ node.bundle|clean_class : '',
-  node is defined ? 'node-id-' ~ node.id : '',
-  is_front ? 'frontpage' : 'not-front',
-  logged_in ? 'user-logged-in' : 'user-anonymous'
-) }}>
-    {% include "@idt_theme/includes/header.html.twig" %}
+  <body {{attributes}}>
+      {{ page.top }}
+    {{ page.content }}
+    {{ page.bottom }}
     <main id="main-content" class="site-content">
       {{ page.content }}
-      {{ node.field_historia_zibo.value }}
     </main>
-    {% include "@idt_theme/includes/footer.html.twig" %}
     <js-bottom-placeholder token="{{ placeholder_token }}">
   </body>
 </html>
