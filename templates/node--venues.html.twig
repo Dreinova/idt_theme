@@ -115,7 +115,10 @@
                 </span>
                 <div class="contact-item__content">
                   <span class="contact-item__label">Zona:</span>
-                  <span class="contact-item__value"></span>
+                  <span class="contact-item__value">
+                    {% for term in node.field_turzone %}
+                    {{ term.entity.name.value }}> {% endfor %}
+                  </span>
                 </div>
               </li>
               <li class="contact-item">
