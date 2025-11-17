@@ -295,7 +295,8 @@
         <div class="gallery-thumbs" data-gallery-thumbs>
           {% if node.field_picgallery is not empty %}
           <div class="gallery">
-            {% for image in node.field_picgallery %}
+            {% for media_item in node.field_picgallery %} {% set image =
+            media_item.entity.field_media_image.0 %}
             <img
               src="{{ file_url(image.entity.uri.value) }}"
               alt="{{ image.alt }}"
