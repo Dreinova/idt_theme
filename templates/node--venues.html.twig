@@ -67,7 +67,7 @@
         <aside class="detail__info-card">
           <div class="detail__info-block">
             <p class="detail__info-label">Direcci&oacute;n</p>
-            <p class="detail__info-data">Carrera 68D #24A - 51</p>
+            <p class="detail__info-data">{{ node.field_direccion }}</p>
           </div>
           <div class="detail__info-block">
             <p class="detail__info-label">Contacto</p>
@@ -91,7 +91,9 @@
                 </span>
                 <div class="contact-item__content">
                   <span class="contact-item__label">Tel&eacute;fono:</span>
-                  <span class="contact-item__value">(601) 4272707</span>
+                  <span class="contact-item__value">{{
+                    node.field_telefono
+                  }}</span>
                 </div>
               </li>
               <li class="contact-item">
@@ -112,7 +114,9 @@
                 </span>
                 <div class="contact-item__content">
                   <span class="contact-item__label">Zona:</span>
-                  <span class="contact-item__value">Occidente</span>
+                  <span class="contact-item__value">{{
+                    node.field_turzone
+                  }}</span>
                 </div>
               </li>
               <li class="contact-item">
@@ -136,7 +140,7 @@
                   <a
                     class="contact-item__value link"
                     href="mailto:info@maloka.org"
-                    >info@maloka.org</a
+                    >{{ node.field_correo }}</a
                   >
                 </div>
               </li>
@@ -160,10 +164,10 @@
                   <span class="contact-item__label">P&aacute;gina web:</span>
                   <a
                     class="contact-item__value link"
-                    href="https://maloka.org"
+                    href="{{ node.field_weblink }}"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >https://maloka.org</a
+                    >{{ node.field_weblink }}</a
                   >
                 </div>
               </li>
