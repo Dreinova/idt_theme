@@ -12,12 +12,11 @@
   </head>
 
   <body {{attributes}}>
-      {{ page.top }}
-    {{ page.content }}
-    {{ page.bottom }}
+    {% include "@idt_theme/includes/header.html.twig" %}
     <main id="main-content" class="site-content">
       {{ page.content }}
     </main>
+    {% include "@idt_theme/includes/footer.html.twig" %}
     <js-bottom-placeholder token="{{ placeholder_token }}">
   </body>
 </html>
