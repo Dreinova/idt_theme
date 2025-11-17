@@ -293,7 +293,17 @@
           </button>
         </div>
         <div class="gallery-thumbs" data-gallery-thumbs>
-          {{ dump(node.field_picgallery.0) }}
+          {% if node.field_picgallery is not empty %}
+          <div class="gallery">
+            {% for image in node.field_picgallery %}
+            <img
+              src="{{ image.entity.uri.value | image_style('large') }}"
+              alt="{{ image.alt }}"
+            />
+            {% endfor %}
+          </div>
+          {% endif %}
+
           <button
             class="gallery-thumbs__item is-active"
             type="button"
