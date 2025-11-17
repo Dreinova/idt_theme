@@ -120,7 +120,7 @@
             
             {% for item in venues %}
                 <a class="place-card" href="detalle.html">
-                    <div class="place-card__media place-card__media--a" aria-hidden="true"></div>
+                    <div class="place-card__media place-card__media--a" aria-hidden="true" style="background-image: url({{item.fields.field_image.0.url}});"></div>
                     <div class="place-card__body">
                         <h3 class="place-card__title">{{ item.title }}</h3>
                     </div>
